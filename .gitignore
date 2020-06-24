@@ -1,6 +1,10 @@
 node_modules
 bower_components
 
+# e2e testing
+selenium-server.log
+tests_output
+
 # docs site
 _gh_pages
 
