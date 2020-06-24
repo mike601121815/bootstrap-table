@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<!--BOOTSTRAP 4-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!--BOOTSTRAP TABLE-->
+<link href="/src/bootstrap-table.css" rel="stylesheet">
+<script type="module" src="/src/bootstrap-table.js"></script>
+
+<!-- tmp -->
+<table
+        id="table"
+        data-search="true"
+        data-pagination="true"
+        data-url="json/data1.json"
+        data-filter-control="true"
+        data-show-search-clear-button="true">
+    <thead>
+    <tr>
+        <th data-field="id">ID</th>
+        <th data-field="name" data-filter-control="input">Item Name</th>
+        <th data-field="price" data-filter-control="select">Item Price</th>
+    </tr>
+    </thead>
+</table>
+
+<script>
+  $(function() {
+    $('#table').bootstrapTable()
+  })
+</script>
