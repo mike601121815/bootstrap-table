@@ -1,6 +1,6 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
- * version: 1.16.0
+ * version: 1.17.0
  * https://github.com/wenzhixin/bootstrap-table/
  */
 
@@ -2849,7 +2849,7 @@ class BootstrapTable {
       options = Object.assign(options, params)
     } else if (typeof params === 'string' && params === 'bottom') {
       options.value = this.$tableBody[0].scrollHeight
-    } else if (typeof params === 'string') {
+    } else if (typeof params === 'string' || typeof params === 'number') {
       options.value = params
     }
 
