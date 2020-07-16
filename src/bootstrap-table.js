@@ -1538,7 +1538,7 @@ class BootstrapTable {
     // show no records
     if (!hasTr) {
       this.$body.html(`<tr class="no-records-found">${Utils.sprintf('<td colspan="%s">%s</td>',
-        this.getVisibleFields().length,
+        this.getVisibleColumnCount(),
         this.options.formatNoMatches())}</tr>`)
     } else {
       if (!this.options.virtualScroll) {
@@ -2116,6 +2116,16 @@ class BootstrapTable {
       visibleFields.push(field)
     }
     return visibleFields
+  }
+
+  getVisibleColumnCount () {
+    let count = this.getVisibleFields().length
+
+    if (this.options.detailView) {
+      count += 1
+    }
+
+    return count
   }
 
   initHiddenRows () {
